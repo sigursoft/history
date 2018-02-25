@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.email    = 'anton.kozik@gmail.com'
   gem.homepage = 'http://github.com/sigursoft/history'
 
+  gem.add_dependency 'activesupport', '~>5.1'
   gem.add_dependency 'cuba', '~> 3.9'
   gem.add_dependency 'rack', '~> 2.0'
 
