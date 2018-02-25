@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    belarus-history-service (1.0)
+      cuba (~> 3.9)
+      rack (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    clap (1.0.0)
+    cuba (3.9.2)
+      rack (>= 1.6.0)
+    cutest (1.2.3)
+      clap
+    rack (2.0.4)
+    rack-test (0.8.2)
+      rack (>= 1.0, < 3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  belarus-history-service!
+  cutest (~> 1.2)
+  rack-test (~> 0.7)
+
+BUNDLED WITH
+   1.16.1
