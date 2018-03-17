@@ -1,20 +1,28 @@
-#--
-# Copyright 2018 by Anton Kozik (anton.kozik@gmail.com)
-#--
+# frozen_string_literal: true
+
+#-------------------------------------------------------#
+# Copyright 2018 by Anton Kozik (anton.kozik@gmail.com) #
+#-------------------------------------------------------#
+
 require 'cuba'
 require 'json'
 
 HISTORY = ['Example message 1', 'Example message 2', 'Example message 3', 'Example message 4'].freeze
+# Load history facts from S3
+CONTENT_TYPE = 'Content-Type'
 
-CONTENT_TYPE = 'Content-Type'.freeze
 
 Cuba.define do
+
+  def generate_response(hash)
+    res.headers[CONTENT_TYPE] = 'application/json'
+    res.write JSON.generate(hash)
+  end
+
   on get do
     on root do
-      res.headers[CONTENT_TYPE] = 'application/json'
-      message = { fact: HISTORY.sample }
-      res.write JSON.generate message
+      generate_response(fact: HISTORY.sample)
     end
   end
-end
 
+end
