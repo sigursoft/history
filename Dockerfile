@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.5.3
 
 ENV APP /opt/history
 
@@ -6,10 +6,10 @@ RUN mkdir -p $APP
 
 WORKDIR $APP
 
-ADD config.ru $APP
-ADD lib $APP/lib
-ADD Gemfile $APP
-ADD history.gemspec $APP
+COPY config.ru $APP
+COPY lib $APP/lib
+COPY Gemfile $APP
+COPY history.gemspec $APP
 
 RUN bundle install
 

@@ -20,8 +20,19 @@ Cuba.define do
   end
 
   on get do
+
     on root do
-      generate_response(fact: HISTORY.sample)
+      res.write 'Service description'
+    end
+
+    on 'service' do
+      on 'history' do
+        generate_response(fact: HISTORY.sample)
+      end
+    end
+
+    on 'health' do
+      res.write 'OK'
     end
   end
 
