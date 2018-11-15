@@ -18,7 +18,7 @@ GEM
       clap
     pg (1.0.0)
     puma (3.11.3)
-    rack (2.0.4)
+    rack (2.0.6)
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
     sequel (5.6.0)
