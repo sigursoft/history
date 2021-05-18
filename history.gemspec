@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'cuba', '~> 3.9'
   gem.add_dependency 'pg', '~> 1.0'
-  gem.add_dependency 'puma', '>= 4.3.3', '< 5.0' 
+  gem.add_dependency 'puma', '>= 4.3.3', '< 6.0' 
   gem.add_dependency 'rack', '~> 2.0'
   gem.add_dependency 'sequel', '~> 5.6'
 
